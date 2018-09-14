@@ -15,17 +15,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L RF_Module:ESP-07 U2
-U 1 1 5B9B58E5
-P 5600 2900
-F 0 "U2" H 5600 3878 50  0000 C CNN
-F 1 "ESP-07" H 5600 3787 50  0000 C CNN
-F 2 "RF_Module:ESP-07" H 5600 2900 50  0001 C CNN
-F 3 "http://wiki.ai-thinker.com/_media/esp8266/esp8266_series_modules_user_manual_v1.1.pdf" H 5250 3000 50  0001 C CNN
-	1    5600 2900
-	1    0    0    -1  
-$EndComp
-$Comp
 L Connector:Jack-DC J1
 U 1 1 5B9B5C12
 P 2250 1600
@@ -72,23 +61,6 @@ Wire Wire Line
 	7850 1950 7850 2500
 Wire Wire Line
 	7850 2500 6200 2500
-$Comp
-L Connector_Generic:Conn_01x03 J2
-U 1 1 5B9B5E48
-P 8650 2200
-F 0 "J2" H 8730 2242 50  0000 L CNN
-F 1 "USB<->ttl" H 8730 2151 50  0000 L CNN
-F 2 "Connector_PinHeader_2.00mm:PinHeader_1x03_P2.00mm_Horizontal" H 8650 2200 50  0001 C CNN
-F 3 "~" H 8650 2200 50  0001 C CNN
-	1    8650 2200
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6200 2400 8050 2400
-Wire Wire Line
-	8050 2400 8050 2100
-Wire Wire Line
-	8050 2100 8450 2100
 Wire Wire Line
 	6200 2600 8200 2600
 Wire Wire Line
@@ -147,8 +119,6 @@ F 3 "" H 7450 2500 50  0001 C CNN
 	1    7450 2300
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	7650 2300 8450 2300
 Connection ~ 6900 1500
 Connection ~ 6900 2300
 Wire Wire Line
@@ -317,18 +287,18 @@ U 1 1 5B9CAB89
 P 8700 3000
 F 0 "J3" H 8780 2992 50  0000 L CNN
 F 1 "SPI_CONN" H 8780 2901 50  0000 L CNN
-F 2 "Connector_PinHeader_2.00mm:PinHeader_1x04_P2.00mm_Horizontal" H 8700 3000 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal" H 8700 3000 50  0001 C CNN
 F 3 "~" H 8700 3000 50  0001 C CNN
 	1    8700 3000
 	1    0    0    -1  
 $EndComp
 Text Label 7600 2950 2    50   ~ 0
 HSPICS
-Text Label 8500 3200 2    50   ~ 0
+Text Label 8500 2900 2    50   ~ 0
 HSPI_CLK
-Text Label 8500 3000 2    50   ~ 0
-HSPI_MOSI
 Text Label 8500 3100 2    50   ~ 0
+HSPI_MOSI
+Text Label 8500 3000 2    50   ~ 0
 HSPI_MISO
 NoConn ~ 5000 2700
 $Comp
@@ -337,7 +307,7 @@ U 1 1 5B9CD4F1
 P 8700 3500
 F 0 "J4" H 8780 3542 50  0000 L CNN
 F 1 "GPIO_5_4_0" H 8780 3451 50  0000 L CNN
-F 2 "Connector_PinHeader_2.00mm:PinHeader_1x03_P2.00mm_Horizontal" H 8700 3500 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Horizontal" H 8700 3500 50  0001 C CNN
 F 3 "~" H 8700 3500 50  0001 C CNN
 	1    8700 3500
 	1    0    0    -1  
@@ -352,7 +322,7 @@ Text Label 8250 4000 2    50   ~ 0
 GPIO2
 Text Label 8500 3500 2    50   ~ 0
 GPIO4
-Text Label 8500 3400 2    50   ~ 0
+Text Label 8500 3600 2    50   ~ 0
 GPIO5
 $Comp
 L power:PWR_FLAG #FLG0101
@@ -368,9 +338,6 @@ $EndComp
 Connection ~ 2650 1500
 Wire Wire Line
 	2650 1500 2900 1500
-Wire Wire Line
-	8450 2500 8450 2300
-Connection ~ 8450 2300
 Wire Wire Line
 	5600 2100 5600 1500
 Connection ~ 5600 1500
@@ -433,7 +400,7 @@ Wire Wire Line
 	4000 2350 4350 2350
 Text Label 6200 2300 0    50   ~ 0
 GIPO0
-Text Label 8500 3600 2    50   ~ 0
+Text Label 8500 3400 2    50   ~ 0
 GIPO0
 $Comp
 L Device:Fuse F1
@@ -456,6 +423,45 @@ Connection ~ 5600 3650
 Connection ~ 5600 3950
 Wire Wire Line
 	2550 2500 2550 3950
+$Comp
+L Connector_Generic:Conn_01x03 J2
+U 1 1 5B9B5E48
+P 8650 2200
+F 0 "J2" H 8730 2242 50  0000 L CNN
+F 1 "USB<->ttl" H 8730 2151 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Horizontal" H 8650 2200 50  0001 C CNN
+F 3 "~" H 8650 2200 50  0001 C CNN
+	1    8650 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7650 2300 7650 2100
+Wire Wire Line
+	7650 2100 8350 2100
+Wire Wire Line
+	8450 2400 8450 2300
+Wire Wire Line
+	6200 2400 8450 2400
+Wire Wire Line
+	8450 2500 8350 2500
+Wire Wire Line
+	8350 2500 8350 2100
+Connection ~ 8350 2100
+Wire Wire Line
+	8350 2100 8450 2100
+Wire Wire Line
+	5450 3950 5600 3950
+$Comp
+L RF_Module:ESP-07 U2
+U 1 1 5B9B58E5
+P 5600 2900
+F 0 "U2" H 5600 3878 50  0000 C CNN
+F 1 "ESP-07" H 5600 3787 50  0000 C CNN
+F 2 "RF_Module:ESP-07" H 5600 2900 50  0001 C CNN
+F 3 "http://wiki.ai-thinker.com/_media/esp8266/esp8266_series_modules_user_manual_v1.1.pdf" H 5250 3000 50  0001 C CNN
+	1    5600 2900
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
 	2550 3950 5600 3950
 $EndSCHEMATC
