@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:esp32Counter-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -24,4 +25,378 @@ F 3 "http://wiki.ai-thinker.com/_media/esp8266/esp8266_series_modules_user_manua
 	1    5600 2900
 	1    0    0    -1  
 $EndComp
+$Comp
+L Connector:Jack-DC J?
+U 1 1 5B9B5C12
+P 2250 1600
+F 0 "J?" H 2305 1925 50  0000 C CNN
+F 1 "Jack-DC" H 2305 1834 50  0000 C CNN
+F 2 "" H 2300 1560 50  0001 C CNN
+F 3 "~" H 2300 1560 50  0001 C CNN
+	1    2250 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 1500 2900 1500
+$Comp
+L Device:R R?
+U 1 1 5B9B5C7D
+P 6900 1800
+F 0 "R?" H 6970 1846 50  0000 L CNN
+F 1 "10k" H 6970 1755 50  0000 L CNN
+F 2 "" V 6830 1800 50  0001 C CNN
+F 3 "~" H 6900 1800 50  0001 C CNN
+	1    6900 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5B9B5D01
+P 7850 1800
+F 0 "R?" H 7920 1846 50  0000 L CNN
+F 1 "10k" H 7920 1755 50  0000 L CNN
+F 2 "" V 7780 1800 50  0001 C CNN
+F 3 "~" H 7850 1800 50  0001 C CNN
+	1    7850 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6900 1500 6900 1650
+Wire Wire Line
+	6900 1950 6900 2300
+Wire Wire Line
+	7250 2300 6900 2300
+Wire Wire Line
+	7850 1500 7850 1650
+Wire Wire Line
+	7850 1950 7850 2500
+Wire Wire Line
+	7850 2500 6200 2500
+$Comp
+L Connector_Generic:Conn_01x03 J?
+U 1 1 5B9B5E48
+P 8650 2200
+F 0 "J?" H 8730 2242 50  0000 L CNN
+F 1 "Conn_01x03" H 8730 2151 50  0000 L CNN
+F 2 "" H 8650 2200 50  0001 C CNN
+F 3 "~" H 8650 2200 50  0001 C CNN
+	1    8650 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 2400 8050 2400
+Wire Wire Line
+	8050 2400 8050 2100
+Wire Wire Line
+	8050 2100 8450 2100
+Wire Wire Line
+	6200 2600 8200 2600
+Wire Wire Line
+	8200 2600 8200 2200
+Wire Wire Line
+	8200 2200 8450 2200
+Text Label 6350 2400 0    50   ~ 0
+TXtoRX
+Text Label 6350 2500 0    50   ~ 0
+RXtoTX
+$Comp
+L power:GNDD #PWR?
+U 1 1 5B9B60B6
+P 8450 2500
+F 0 "#PWR?" H 8450 2250 50  0001 C CNN
+F 1 "GNDD" H 8454 2345 50  0000 C CNN
+F 2 "" H 8450 2500 50  0001 C CNN
+F 3 "" H 8450 2500 50  0001 C CNN
+	1    8450 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDD #PWR?
+U 1 1 5B9B61E5
+P 5600 3700
+F 0 "#PWR?" H 5600 3450 50  0001 C CNN
+F 1 "GNDD" H 5604 3545 50  0000 C CNN
+F 2 "" H 5600 3700 50  0001 C CNN
+F 3 "" H 5600 3700 50  0001 C CNN
+	1    5600 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 3600 5600 3650
+Wire Wire Line
+	8450 2300 8450 2600
+Wire Wire Line
+	5600 3650 2550 3650
+Wire Wire Line
+	2550 3650 2550 2500
+Connection ~ 5600 3650
+Wire Wire Line
+	5600 3650 5600 3700
+$Comp
+L Device:R R?
+U 1 1 5B9B64B5
+P 6800 3500
+F 0 "R?" H 6870 3546 50  0000 L CNN
+F 1 "10k" H 6870 3455 50  0000 L CNN
+F 2 "" V 6730 3500 50  0001 C CNN
+F 3 "~" H 6800 3500 50  0001 C CNN
+	1    6800 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6800 3650 5600 3650
+Wire Wire Line
+	6800 3350 6800 3200
+Wire Wire Line
+	6800 3200 6200 3200
+$Comp
+L Switch:SW_Push SW?
+U 1 1 5B9B8723
+P 7450 2300
+F 0 "SW?" H 7450 2585 50  0000 C CNN
+F 1 "SW_Push" H 7450 2494 50  0000 C CNN
+F 2 "" H 7450 2500 50  0001 C CNN
+F 3 "" H 7450 2500 50  0001 C CNN
+	1    7450 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7650 2300 8450 2300
+Connection ~ 8450 2300
+Connection ~ 6900 1500
+Connection ~ 6900 2300
+Wire Wire Line
+	6900 2300 6200 2300
+Wire Wire Line
+	6900 1500 7850 1500
+$Comp
+L Regulator_Linear:AMS1117-3.3 U?
+U 1 1 5B9B928B
+P 3500 1500
+F 0 "U?" H 3500 1742 50  0000 C CNN
+F 1 "AMS1117-3.3" H 3500 1651 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 3500 1700 50  0001 C CNN
+F 3 "http://www.advanced-monolithic.com/pdf/ds1117.pdf" H 3600 1250 50  0001 C CNN
+	1    3500 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 1500 3950 1500
+$Comp
+L Device:C C?
+U 1 1 5B9B9817
+P 3500 2050
+F 0 "C?" H 3615 2096 50  0000 L CNN
+F 1 "10uF" H 3615 2005 50  0000 L CNN
+F 2 "" H 3538 1900 50  0001 C CNN
+F 3 "~" H 3500 2050 50  0001 C CNN
+	1    3500 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 1800 3500 1850
+$Comp
+L Device:R R?
+U 1 1 5B9B9BD0
+P 3950 1650
+F 0 "R?" H 4020 1696 50  0000 L CNN
+F 1 "100" H 4020 1605 50  0000 L CNN
+F 2 "" V 3880 1650 50  0001 C CNN
+F 3 "~" H 3950 1650 50  0001 C CNN
+	1    3950 1650
+	1    0    0    -1  
+$EndComp
+Connection ~ 3950 1500
+Wire Wire Line
+	3950 1500 4250 1500
+$Comp
+L Device:R R?
+U 1 1 5B9B9C1E
+P 3950 2050
+F 0 "R?" H 4020 2096 50  0000 L CNN
+F 1 "100" H 4020 2005 50  0000 L CNN
+F 2 "" V 3880 2050 50  0001 C CNN
+F 3 "~" H 3950 2050 50  0001 C CNN
+	1    3950 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 1800 3950 1850
+Wire Wire Line
+	3500 1850 3950 1850
+Connection ~ 3500 1850
+Wire Wire Line
+	3500 1850 3500 1900
+Connection ~ 3950 1850
+Wire Wire Line
+	3950 1850 3950 1900
+Wire Wire Line
+	3950 2200 3950 2350
+Wire Wire Line
+	3950 2350 3500 2350
+Connection ~ 2550 2350
+Wire Wire Line
+	2550 2350 2550 1700
+Wire Wire Line
+	3500 2200 3500 2350
+Connection ~ 3500 2350
+Wire Wire Line
+	3500 2350 2550 2350
+$Comp
+L Device:CP C?
+U 1 1 5B9BAE80
+P 4250 1800
+F 0 "C?" H 4368 1846 50  0000 L CNN
+F 1 "100uF" H 4368 1755 50  0000 L CNN
+F 2 "" H 4288 1650 50  0001 C CNN
+F 3 "~" H 4250 1800 50  0001 C CNN
+	1    4250 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 2350 3950 2350
+Connection ~ 3950 2350
+$Comp
+L Device:D D?
+U 1 1 5B9BB654
+P 3500 1100
+F 0 "D?" H 3500 1316 50  0000 C CNN
+F 1 "D" H 3500 1225 50  0000 C CNN
+F 2 "" H 3500 1100 50  0001 C CNN
+F 3 "~" H 3500 1100 50  0001 C CNN
+	1    3500 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 1500 3950 1100
+Wire Wire Line
+	3950 1100 3650 1100
+Wire Wire Line
+	3350 1100 2900 1100
+Wire Wire Line
+	2900 1100 2900 1500
+Connection ~ 2900 1500
+Wire Wire Line
+	2900 1500 3200 1500
+Wire Wire Line
+	6200 3300 6400 3300
+Text Label 6250 3300 0    50   ~ 0
+deepsleep
+$Comp
+L Device:R R?
+U 1 1 5B9BD12A
+P 4950 1800
+F 0 "R?" H 5020 1846 50  0000 L CNN
+F 1 "10k" H 5020 1755 50  0000 L CNN
+F 2 "" V 4880 1800 50  0001 C CNN
+F 3 "~" H 4950 1800 50  0001 C CNN
+	1    4950 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 1500 4950 1650
+Wire Wire Line
+	4950 1950 4950 2300
+Wire Wire Line
+	4450 2300 4450 2500
+Wire Wire Line
+	4450 2500 3450 2500
+$Comp
+L Switch:SW_Push SW?
+U 1 1 5B9BF3B0
+P 3050 2500
+F 0 "SW?" H 3050 2785 50  0000 C CNN
+F 1 "SW_Push" H 3050 2694 50  0000 C CNN
+F 2 "" H 3050 2700 50  0001 C CNN
+F 3 "" H 3050 2700 50  0001 C CNN
+	1    3050 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 2500 2550 2500
+Connection ~ 2550 2500
+Wire Wire Line
+	2550 2500 2550 2350
+$Comp
+L Device:R R?
+U 1 1 5B9C021F
+P 3450 2700
+F 0 "R?" H 3520 2746 50  0000 L CNN
+F 1 "470" H 3520 2655 50  0000 L CNN
+F 2 "" V 3380 2700 50  0001 C CNN
+F 3 "~" H 3450 2700 50  0001 C CNN
+	1    3450 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 2500 3450 2550
+Connection ~ 3450 2500
+Wire Wire Line
+	3450 2500 3250 2500
+Wire Wire Line
+	3450 2850 2950 2850
+Text Label 2950 2850 0    50   ~ 0
+deepleep
+Connection ~ 4250 1500
+Wire Wire Line
+	4250 1950 4250 2350
+Wire Wire Line
+	4250 1500 4250 1650
+$Comp
+L Device:R R?
+U 1 1 5B9C5223
+P 4650 1800
+F 0 "R?" H 4720 1846 50  0000 L CNN
+F 1 "10k" H 4720 1755 50  0000 L CNN
+F 2 "" V 4580 1800 50  0001 C CNN
+F 3 "~" H 4650 1800 50  0001 C CNN
+	1    4650 1800
+	1    0    0    -1  
+$EndComp
+Connection ~ 4950 1500
+Wire Wire Line
+	4950 1500 6900 1500
+Connection ~ 4950 2300
+Wire Wire Line
+	4950 2300 5000 2300
+Wire Wire Line
+	4250 1500 4650 1500
+Wire Wire Line
+	4450 2300 4950 2300
+Wire Wire Line
+	4650 1500 4650 1650
+Connection ~ 4650 1500
+Wire Wire Line
+	4650 1500 4950 1500
+Wire Wire Line
+	4650 1950 4650 2500
+Wire Wire Line
+	4650 2500 5000 2500
+Text Label 6200 3100 0    50   ~ 0
+HSPI_CLK
+Text Label 6200 2900 0    50   ~ 0
+HSPI_MISO
+Text Label 6200 3000 0    50   ~ 0
+HSPI_MOSI
+Text Label 6250 3200 0    50   ~ 0
+HSPICS
+$Comp
+L Connector_Generic:Conn_01x04 J?
+U 1 1 5B9CAB89
+P 8700 3000
+F 0 "J?" H 8780 2992 50  0000 L CNN
+F 1 "Conn_01x04" H 8780 2901 50  0000 L CNN
+F 2 "" H 8700 3000 50  0001 C CNN
+F 3 "~" H 8700 3000 50  0001 C CNN
+	1    8700 3000
+	1    0    0    -1  
+$EndComp
+Text Label 8500 3200 2    50   ~ 0
+HSPICS
+Text Label 8500 3100 2    50   ~ 0
+HSPI_CLK
+Text Label 8500 3000 2    50   ~ 0
+HSPI_MOSI
+Text Label 8500 2900 2    50   ~ 0
+HSPI_MISO
 $EndSCHEMATC
